@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="same-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css">
+    <script src="https://unpkg.com/@stoplight/elements/web-components.min.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+         .sl-elements-api div.sl-flex > a:last-of-type {
+            display: none !important;
+         }
+    </style>
+</head>
+<body>
+    <elements-api
+        apiDescriptionUrl="/openapi.json"
+        router="hash"
+        layout="sidebar"
+        tryItCredentialsPolicy="same-origin"
+    />
+</body>
+</html>
