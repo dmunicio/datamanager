@@ -165,7 +165,6 @@ func registerRoutes(api huma.API) {
 		RequestBody: &requestBody,
 	}, handleAssetPost)
 
-	// assetGetResponseSchema := registry.Schema(reflect.TypeOf(AssetGetResponse{}), true, "")
 	type1ResponseSchema := registry.Schema(reflect.TypeOf(models.AssetType1Response{}), true, "")
 	type2ResponseSchema := registry.Schema(reflect.TypeOf(models.AssetType2Response{}), true, "")
 	assetGetResponseSchema := &huma.Schema{

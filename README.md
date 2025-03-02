@@ -21,4 +21,5 @@ go run main.go
 ```
 
 Then go to [http://localhost:8080/docs](http://localhost:8080/docs)
+
 You can access to the generated openapi.json: [http://localhost:8080/openapi.json](http://localhost:8080/openapi.json)
