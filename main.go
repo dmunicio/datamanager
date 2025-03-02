@@ -72,9 +72,7 @@ func handleAssetPost(ctx context.Context, input *AssetPostRequest) (*AssetPostRe
 		if err != nil {
 			return nil, huma.Error500InternalServerError("Error writing file:", err)
 		}
-		fmt.Println("DEBUG: Successfully parsed PaymentAsset")
 	default:
-		fmt.Println("DEBUG: Unknown type received:", typeVal)
 		return nil, huma.Error400BadRequest("Unknown type: " + typeVal)
 	}
 	resp := &AssetPostResponse{}
@@ -87,9 +85,7 @@ func handleAssetGet(ctx context.Context, input *AssetGetRequest) (*AssetGetRespo
 	resp := &AssetGetResponse{}
 	jsonFile := input.Id + ".json"
 	file, err := os.Open(jsonFile)
-	fmt.Println("opening file:", jsonFile)
 	if err != nil {
-		fmt.Println("Error opening file:", err)
 		return nil, huma.Error404NotFound("not found file " + jsonFile)
 	}
 	defer file.Close() // Ensure the file is closed when done
